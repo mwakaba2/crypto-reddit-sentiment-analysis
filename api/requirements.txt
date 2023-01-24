@@ -1,0 +1,4 @@
+emoji==2.2.0
+--extra-index-url https://download.pytorch.org/whl/cpu # Needed to only install cpu-only dependencies and reduce image size
+torch==1.13.1
+transformers==4.25.1
