@@ -26,7 +26,7 @@ Accuracy on given crypto dataset:
 2. Roberta base fine-tuned on tweets sentiment - Accuracy is 87.862%
 3. CryptoBert, bertweet model fine-tuned on crypto sentiment - Accuracy is 75.724%
 
-Distilbert's prediction speed is **2x** faster than the other models, based on longest comment with 701 tokens.
+Distilbert's prediction speed is **2x** faster than the other models when tested on longest comment with 701 tokens.
 
 Next Steps
 
@@ -34,6 +34,16 @@ Next Steps
 2. Create weak labels with best sentiment analysis model --> Roberta.
 3. Fine-tune Distilbert with generated training dataset. 
 
+## Step 3: Training Data Collection
+
+filepath: `collect_training_data.ipynb`
+
+The given dataset may be too small to fine-tune a model. Assuming the given dataset is a good representation of real world production data, I wanted like to keep that data separate as a final test, so I needed to create a new training dataset.
+
+Given the limited time, I created a new training dataset with readily available crypto-related reddit data found on Kaggle:
+
+* https://www.kaggle.com/datasets/leukipp/reddit-crypto-data: Reddit posts from various crypto-related subreddits.
+* https://www.kaggle.com/datasets/gpreda/reddit-cryptocurrency: Reddit post and comments from CryptoCurrency Subreddit.
 
 
 

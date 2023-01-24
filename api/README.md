@@ -28,4 +28,3 @@ Deploy via Terraform
 ```bash
 (mariko_sentiment_analysis) $ cd api/terraform && terraform init && terraform apply
 ```
-
