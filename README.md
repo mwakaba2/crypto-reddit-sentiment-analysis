@@ -38,7 +38,9 @@ First, I analyzed the given crypto dataset to do the following:
 
 Next, I evaluated open-source pretrained sentiment models against the given crypto dataset. My goal was to find the sentiment model that produces the best accuracy on that dataset and fine-tune it further. The best model was a Roberta based model that was fine-tuned on tweets. The worst model was a Distilbert model that was fine-tuned on movie reviews. 
 
-The Roberta based model would have been ideal for getting the best accuracy, but it has a large memory footprint and is **2x** slower than Distilbert, so I decided to fine-tune the Distilbert base model instead. The Distilbert base model needed crypto sentiment data to be fine-tuned, so I created a new dataset. I accomplished this by doing the following:
+The Roberta based model would have been ideal for getting the best accuracy, but it has a large memory footprint and is **2x** slower than Distilbert, so I decided to fine-tune the Distilbert base model instead. According to research, Distilbert is 40% smaller and 60% faster than the original BERT-base model, and retains 97% of its functionality (source from https://arxiv.org/abs/1910.01108).
+
+The Distilbert base model needed crypto sentiment data to be fine-tuned, so I created a new dataset. I accomplished this by doing the following:
 
 1. Gathered open-source crypto reddit data.
 2. Collected sentiment labels from the Roberta sentiment model's outputs. (weak labels)
