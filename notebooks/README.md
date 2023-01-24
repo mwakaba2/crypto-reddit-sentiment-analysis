@@ -1,10 +1,10 @@
 # Sentiment Analysis Experiments
 
-## Step 1: Data Exploration
+## Step 1: Explore and Understand the Data
 
 filepath: `explore_data.ipynb`
 
-First step is to analyze the given crypto-related reddit comment dataset and look for any quirks and characteristics.
+First step is to analyze the given crypto-related reddit comment dataset to learn more about the comments.
 
 ### Some takeaways:
 
@@ -13,7 +13,7 @@ First step is to analyze the given crypto-related reddit comment dataset and loo
 3. Similar to tweets, the comments have crypto jargons/slangs, sarcasm, emojis, and urls. However, comments don't have character constraints like tweets.
 
 
-## Step 2: Pre-trained Model Evaluation
+## Step 2: Evaluate Pre-trained Sentiment Models
 
 filepath: `evaluate_pretrained_models.ipynb`
 
@@ -34,7 +34,7 @@ Next Steps
 2. Create weak labels with best sentiment analysis model --> Roberta.
 3. Fine-tune Distilbert with generated training dataset. 
 
-## Step 3: Training Data Collection
+## Step 3: Collect Training Data For Distilbert Fine-Tuning
 
 filepath: `collect_training_data.ipynb`
 
@@ -46,7 +46,7 @@ Given the limited time, I created a new training dataset with readily available 
 * https://www.kaggle.com/datasets/gpreda/reddit-cryptocurrency: Reddit post and comments from CryptoCurrency Subreddit.
 
 
-## Step 4: Gather Weak Labels + Fine-tuning with GPU
+## Step 4: Gather Weak Sentiment Labels + Fine-Tune with GPU
 
 file url: https://colab.research.google.com/drive/1K6iuzCHM_UkRPEbeo-W5YSb1kHaHJY7H?usp=sharing
 
@@ -56,7 +56,7 @@ I ran this notebook on GPU enabled Google Colab to do two things:
 2. Fine-tune Distilbert base uncased with training dataset. 
 
 
-## Step 5: Fine-tuned Model Evaluation
+## Step 5: Evaluate New Fine-tuned Sentiment Model
 
 filepath: `evaluate_finetuned_model.ipynb`
 
