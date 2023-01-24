@@ -12,7 +12,7 @@ Stress test api for 5 minutes. Spawn rate and concurrent number of users are set
 
 ### Local Results
 
-More detailed results at `results/stress_test_local.csv'
+More detailed results at `results/stress_test_local.csv`
 ```
 HOST: "http://127.0.0.1:8000"
 
@@ -26,7 +26,7 @@ POST     /analyze          15331     0(0.00%) |     19      16     181     19 | 
 
 ### AWS Results
 
-More detailed results at `results/stress_test_aws.csv'
+More detailed results at `results/stress_test_aws.csv`
 ```
 HOST: "http://sentiment-analysis-api-alb-1385522225.us-east-1.elb.amazonaws.com"
 
