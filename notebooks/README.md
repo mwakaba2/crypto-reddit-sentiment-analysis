@@ -46,4 +46,35 @@ Given the limited time, I created a new training dataset with readily available 
 * https://www.kaggle.com/datasets/gpreda/reddit-cryptocurrency: Reddit post and comments from CryptoCurrency Subreddit.
 
 
+## Step 4: Gather Weak Labels + Fine-tuning with GPU
+
+file url: https://colab.research.google.com/drive/1K6iuzCHM_UkRPEbeo-W5YSb1kHaHJY7H?usp=sharing
+
+I ran this notebook on GPU enabled Google Colab to do two things:
+
+1. Gather sentiment labels from the Roberta model for the training dataset
+2. Fine-tune Distilbert base uncased with training dataset. 
+
+
+## Step 5: Fine-tuned Model Evaluation
+
+filepath: `evaluate_finetuned_model.ipynb`
+
+I evaluated the fined-tuned Distilbert model with the given crypto dataset. 
+
+Accuracy: `0.86413`
+
+### Some Observations
+
+* **`14.493%`** improvement from the distilbert bert model fine-tuned on SST-2.
+* It seems like the model struggles with sarcasm and mixed sentiment in the same comment.
+
+>Wow, glad I cashed out when I did.
+
+>biggest pyramid scheme in the history of the world. very impressive no?
+
+Mixed sentiment comment (Negative sentiment for USD, positive sentiment for Bitcoin)
+
+>Munger believes the USD will fail in the next 100 years. Since they understand how frail our current monetary system is, it's madness they can't see the value/utility of Bitcoin
+
 
