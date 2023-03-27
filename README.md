@@ -1,13 +1,11 @@
 # Crypto Reddit Sentiment Analysis
 
-API Swagger Docs: http://sentiment-analysis-api-alb-1385522225.us-east-1.elb.amazonaws.com/docs
-
 Fine-tuned Model: https://huggingface.co/mwkby/distilbert-base-uncased-sentiment-reddit-crypto
 
 Example request:
 ```bash
 $ curl -X 'POST' \
-  'http://sentiment-analysis-api-alb-1385522225.us-east-1.elb.amazonaws.com/analyze' \
+  '<API_URL>/analyze' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -17,16 +15,15 @@ $ curl -X 'POST' \
 {"sentiment":{"label":"positive","score":0.998696506023407}}%
 ```
 
-## Project Goals
+## Project Constraints
 
 1. Create a MVP API that can process crypto-related reddit comments and output sentiment in real-time.
 2. Sentiment analysis accuracy ideally over 90%.
 3. API can handle entire live stream of crypto Reddit comments (assume 10M comments/day) on a compute budget of $100/month
     * Avg requests per sec: `10M / (24hr * 60min * 60sec) = ~116 comments/sec`
     * Assumed peak requests up to three times the avg RPS: `348 comments/sec`
-4. Document thinking process, choices, concerns, trade-offs, and future issues with chosen solution.
 
-## High-level Summary of What I Did
+## High-level Summary
 
 I used a combination of weak supervision, data augmentation, and fine-tuning to generate a sentiment analysis model with accuracy `86.413%`.
 
@@ -82,7 +79,7 @@ Calculations based on [AWS pricing calculator](https://calculator.aws/#/addServi
 ## Ideas for Improving This Further
 
 ### Model Improvements
-Here are some additional experiments I'd like to do to improve the sentiment analysis model:
+Additional experiment ideas to improve the sentiment analysis model:
 
 **1. Truncate the comment text from the left or the middle**
 
